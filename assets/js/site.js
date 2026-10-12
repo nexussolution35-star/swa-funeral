@@ -14,3 +14,13 @@
     });
   });
 })();
+
+// Contact form: open the visitor's email app with the message filled in (no server needed)
+document.querySelectorAll('form[data-mailto]').forEach(function (f) {
+  f.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var d = new FormData(f);
+    var body = 'Name: ' + d.get('name') + '\nPhone: ' + d.get('phone') + '\n\n' + (d.get('message') || '');
+    location.href = 'mailto:' + f.dataset.mailto + '?subject=' + encodeURIComponent('Website enquiry from ' + d.get('name')) + '&body=' + encodeURIComponent(body);
+  });
+});

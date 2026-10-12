@@ -1,6 +1,6 @@
-/* SWA Funeral Homes — swap brand colours here */
+/* SWA Funeral Services — brand colours from the logo (black + gold) */
 :root{
-  --primary:#1f2d52; --accent:#b98a2e; --cream:#fbf3e2; --soft:#e7eef0; --grey:#f2f2f2;
+  --primary:#111111; --accent:#b8871f; --gold-hi:#e8c35a; --cream:#fbf5e6; --soft:#f4ede0; --grey:#f4f3f0;
   --text:#4a4a4a; --white:#fff;
   --serif:"Georgia","Times New Roman",serif;
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
@@ -168,3 +168,72 @@ summary{cursor:pointer;font-family:var(--serif);font-weight:700;color:var(--prim
 }
 .hero .ph span,.scenic .ph span,.pets .ph span,.tile .ph span{position:absolute;bottom:12px;right:16px;font-size:.7rem;opacity:.6}
 .btn{white-space:nowrap}
+
+/* ---- SWA additions ---- */
+img{max-width:100%;display:block}
+img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pic img{width:100%;height:100%;max-height:520px;object-fit:cover;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+.logo img{height:84px;width:auto}
+.hdr{min-height:100px}
+.topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.topbar span:first-child{font-style:italic;color:var(--gold-hi)}
+.btn{background:linear-gradient(135deg,#9a6a12,var(--accent) 45%,var(--gold-hi));color:#111}
+.btn:hover{background:#111;color:var(--gold-hi)}
+.btn.ghost{background:transparent;border:2px solid #fff;color:#fff}.btn.ghost:hover{background:#fff;color:#111}
+.nav-cta{display:flex;align-items:center;margin-left:8px}.nav-cta .btn{padding:.6em 1.2em}
+.page-title{background:#111;border-bottom:4px solid var(--accent)}
+.page-title p{color:var(--gold-hi);margin:.3em 0 0;font-style:italic}
+.page-title h1{color:#fff}
+h3{color:#9a6a12}
+.hero{min-height:680px}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.65))}
+.hero-c{z-index:1}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.scenic:after,.tile:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.75))}
+.scenic-c,.tile-c{z-index:1}
+.feature .pic img{max-height:none;box-shadow:none}
+.owner .sig{font-family:var(--serif);font-style:italic;font-size:1.8rem}
+.pets{min-height:420px}
+.pets:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,0),rgba(0,0,0,.35))}
+.pets-c{z-index:1}.pets .txt{background:rgba(255,255,255,.93)}
+.band h2 small{font-size:1rem;font-family:var(--sans);color:var(--text)}
+.quote .wrap blockquote{margin:24px 0 56px}
+.quote blockquote:before{color:var(--accent)}
+.quote blockquote p{font-family:var(--serif);font-size:1.6rem;color:#111;font-style:italic}
+.gallery{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.gallery .g{display:block;aspect-ratio:4/3;overflow:hidden}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.gallery .g:hover img{transform:scale(1.05)}
+.lead{font-size:1.15rem;max-width:700px;margin:0 auto 32px}
+.small{font-size:.85rem;color:#777}
+.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:stretch}
+.plan{border:1px solid #e4dcc8;padding:28px 22px;text-align:center;position:relative;display:flex;flex-direction:column;background:#fff}
+.plan .btn{margin-top:auto}
+.plan.feat{border:2px solid var(--accent);box-shadow:0 12px 30px rgba(184,135,31,.2);transform:translateY(-8px)}
+.plan .tag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#111;color:var(--gold-hi);font-size:.75rem;padding:3px 12px;letter-spacing:.1em;text-transform:uppercase}
+.price{font-size:1.1rem}.price b{font-size:2rem;color:#111;font-family:var(--serif)}
+.plan .checks{text-align:left}
+.checks{list-style:none;padding:0}.checks li{padding-left:28px;position:relative}
+.checks li:before{content:"\2713";position:absolute;left:0;color:var(--accent);font-weight:700}
+.steps{counter-reset:s;list-style:none;padding:0}
+.steps li{counter-increment:s;position:relative;padding:0 0 20px 70px;border-left:2px solid #e4dcc8;margin-left:22px}
+.steps li:before{content:counter(s);position:absolute;left:-23px;top:0;width:44px;height:44px;border-radius:50%;background:#111;color:var(--gold-hi);display:flex;align-items:center;justify-content:center;font:700 1.2rem var(--serif)}
+.steps li:last-child{border-color:transparent}
+.site-footer{background:#111;color:#ccc;border-top:4px solid var(--accent)}
+.site-footer a{color:#eee}.site-footer a:hover{color:var(--gold-hi)}
+.fbrand img{background:#fff;border-radius:50%;padding:6px;margin-bottom:12px}
+.motto{font-style:italic;color:var(--gold-hi)}
+.social{display:flex;gap:14px}.social a{border:1px solid #555;padding:6px 12px;font-size:.85rem;text-decoration:none}
+.fcol a{overflow-wrap:anywhere}
+.fcol h4{color:var(--gold-hi)}
+.legal{background:#000;color:#999}.legal a{color:#ccc}
+.locations h3{color:#9a6a12}
+.float-call{display:none}
+@media (max-width:1000px){.plans{grid-template-columns:repeat(2,1fr)}.nav-cta{padding:12px 16px}}
+@media (max-width:760px){
+  .plans{grid-template-columns:1fr}.plan.feat{transform:none}
+  .float-call{display:block;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;text-align:center;background:linear-gradient(135deg,#9a6a12,var(--accent),var(--gold-hi));color:#111;font-weight:700;padding:14px;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+  body{padding-bottom:70px}
+  .logo img{height:64px}.hdr{min-height:80px}
+  .topbar span:first-child{display:none}
+}

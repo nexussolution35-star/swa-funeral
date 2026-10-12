@@ -1,8 +1,9 @@
-# SWA Funeral Homes — static site
+# SWA Funeral Services: website
 
-Plain HTML/CSS with no build step, frameworks or third-party requests. Open `index.html` or deploy the folder to any static host.
+Static HTML/CSS with no build step and no third-party scripts. Deploy the folder to any static host.
 
-- Brand colours and fonts: the `:root` variables at the top of `assets/css/site.css`
-- Bracketed text like `[City]` is placeholder copy to replace
-- Grey `.ph` blocks are image placeholders. Replace each with `<img src="assets/img/...">`
-- Forms on the contact and planning pages need to be connected to email or a CRM
+- Brand colours (black and gold from the logo): `:root` in `assets/css/site.css`
+- Photos and logo: `assets/img/` (from SWA's own media, resized for web)
+- Contact form opens the visitor's email app (`mailto:`), so it needs no server
+- Before launch, confirm with SWA: Gold tier price, exact per-tier benefits, branch street addresses,
+  and the insurer/FSP disclosure that South African funeral policies must show
