@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join a Plan Online | SWA Funeral Services</title>
+<meta name="description" content="Register for an SWA funeral plan online. Plans from R160 per month.">
+<meta property="og:title" content="Join a Plan Online | SWA Funeral Services">
+<meta property="og:description" content="Register for an SWA funeral plan online. Plans from R160 per month.">
+<meta property="og:image" content="../assets/img/procession-trike.jpg">
+<link rel="icon" href="../assets/img/favicon.png" type="image/png">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar"><div class="wrap"><span>Where Beauty Softens Your Grief</span><span>24/7: <a href="tel:+27645441292">064 544 1292</a> · <a href="../planning/join-online.html">Join a plan online</a></span></div></div>
+<header class="site-header"><div class="wrap hdr">
+  <a class="logo" href="../index.html"><img src="../assets/img/logo-420.png" alt="SWA Funeral Services" width="84" height="84"></a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" class="nav"><ul><li class="has-sub"><a href="../services/funerals.html">Services</a><ul class="sub"><li><a href="../services/funerals.html">Funerals</a></li><li><a href="../services/graveside-setup.html">Graveside Setup</a></li><li><a href="../services/mortuary.html">Mortuary</a></li><li><a href="../services/caskets.html">Caskets</a></li><li><a href="../services/fleet.html">Our Fleet</a></li></ul></li><li class="has-sub active"><a href="../planning/funeral-plans.html">Funeral Plans</a><ul class="sub"><li><a href="../planning/funeral-plans.html">Plans &amp; Pricing</a></li><li><a href="../planning/join-online.html">Join Online</a></li><li><a href="../planning/immediate-need.html">Immediate Need</a></li></ul></li><li class="has-sub"><a href="../about/about-us.html">About</a><ul class="sub"><li><a href="../about/about-us.html">About SWA</a></li><li><a href="../about/branches.html">Our Branches</a></li><li><a href="../about/team.html">Our Team</a></li><li><a href="../about/gallery.html">Gallery</a></li></ul></li><li class="has-sub"><a href="../resources/faqs.html">Help</a><ul class="sub"><li><a href="../resources/faqs.html">FAQs</a></li><li><a href="../contact/contact-us.html">Contact Us</a></li></ul></li><li class="nav-cta"><a class="btn" href="../planning/join-online.html">Join Online</a></li></ul></nav>
+</div></header>
+<main id="main">
+<section class="page-title"><div class="wrap"><h1>Join a Plan Online</h1><p>Register in a few minutes, and a consultant will confirm your cover</p></div></section>
+<section class="prose"><div class="wrap join-wrap">
+<ol class="mini-steps"><li class="on">Your details</li><li>Choose a plan</li><li>Add family</li><li>Confirm</li></ol>
+<form class="form swa-form join-form" data-form="New plan registration" novalidate>
+<fieldset><legend>1. Main member</legend>
+<div class="grid2"><label>First name(s) <span class='req'>*</span><input type="text" name="first_name" required></label><label>Surname <span class='req'>*</span><input type="text" name="surname" required></label></div>
+<div class="grid2"><label>SA ID number <span class='req'>*</span><input type="text" name="id_number" required inputmode="numeric" maxlength="13" pattern="[0-9]{13}" data-said></label><label>Date of birth <span class='req'>*</span><input type="date" name="dob" required></label></div>
+<div class="grid2"><label>Cell number <span class='req'>*</span><input type="tel" name="phone" required></label><label>Alternative number<input type="tel" name="alt_phone"></label></div>
+<div class="grid2"><label>Email<input type="email" name="email"></label><label>Nearest branch <span class=req>*</span><select name="branch" required><option value="">Select…</option><option>Giyani</option><option>Phalaborwa</option><option>Sekgosese</option><option>Botlokwa</option><option>Saselamani</option><option>Soweto</option></select></label></div>
+<label>Physical address <span class="req">*</span><textarea name="address" rows="2" required></textarea></label>
+</fieldset>
+<fieldset><legend>2. Plan</legend>
+<div class="plan-pick"><label class="pick"><input type="radio" name="plan" value="Silver" required><span>Silver</span></label><label class="pick"><input type="radio" name="plan" value="Silver Plan B" required><span>Silver Plan B</span></label><label class="pick"><input type="radio" name="plan" value="Gold" required><span>Gold</span></label><label class="pick"><input type="radio" name="plan" value="Platinum" required><span>Platinum</span></label><label class="pick"><input type="radio" name="plan" value="Not sure, please advise" required><span>Not sure, please advise</span></label></div>
+<div class="grid2"><label>Preferred payment <span class=req>*</span><select name="payment" required><option value="">Select…</option><option>Debit order</option><option>Cash at branch</option><option>EFT</option><option>Stop order / payroll</option></select></label><label>Preferred debit date<select name="debit_date"><option value="">Select…</option><option>1st</option><option>15th</option><option>25th</option><option>Last day of month</option></select></label></div>
+</fieldset>
+<fieldset><legend>3. Spouse &amp; dependants <small>(up to 15)</small></legend>
+<div class="deps" data-max="15"></div>
+<button type="button" class="btn outline add-dep">+ Add a family member</button>
+<template id="dep-row"><div class="dep"><div class="grid3">
+<label>Full name<input name="dep_name[]" required></label>
+<label>ID number or date of birth<input name="dep_id[]" required></label>
+<label>Relationship<select name="dep_rel[]" required><option value="">Select…</option><option>Spouse</option><option>Child</option><option>Parent</option><option>Parent-in-law</option><option>Sibling</option><option>Grandparent</option><option>Grandchild</option><option>Aunt/Uncle</option><option>Niece/Nephew</option><option>Cousin</option><option>Other</option></select></label>
+</div><button type="button" class="rm" aria-label="Remove">✕</button></div></template>
+</fieldset>
+<fieldset><legend>4. Beneficiary</legend>
+<div class="grid2"><label>Full name <span class='req'>*</span><input type="text" name="ben_name" required></label><label>ID number <span class='req'>*</span><input type="text" name="ben_id" required inputmode="numeric" maxlength="13"></label></div>
+<div class="grid2"><label>Cell number <span class='req'>*</span><input type="tel" name="ben_phone" required></label><label>Relationship to you <span class=req>*</span><select name="ben_rel" required><option value="">Select…</option><option>Spouse</option><option>Child</option><option>Parent</option><option>Parent-in-law</option><option>Sibling</option><option>Grandparent</option><option>Grandchild</option><option>Aunt/Uncle</option><option>Niece/Nephew</option><option>Cousin</option><option>Other</option></select></label></div>
+</fieldset>
+<fieldset><legend>Confirm</legend>
+<label class="tick"><input type="checkbox" name="waiting_period" required> <span>I understand that a 3-month waiting period applies to standard plans.</span></label>
+<label class="tick"><input type="checkbox" name="consent" required> <span>I consent to SWA Funeral Services processing my and my family's personal information to set up this plan, as set out in the <a href="../privacy-policy.html" target="_blank">privacy policy</a> (POPIA).</span></label>
+<label class="tick"><input type="checkbox" name="marketing"> <span>Keep me informed about SWA news and offers.</span></label>
+<button class="btn big-btn" type="submit">Submit Registration</button>
+<p class="small">Your cover is confirmed once a consultant has verified your details and your first premium is received.</p>
+</fieldset>
+</form>
+<aside class="join-side"><h3>Need help?</h3><p>Call us on <a href="tel:+27645441292">064 544 1292</a> or visit your <a href="../about/branches.html">nearest branch</a>. You can also SMS “Swa” to 064 544 1292.</p>
+<div class="side-pic"><img class="" src="../assets/img/team.jpg" alt="SWA consultants" loading="lazy" decoding="async"></div></aside>
+</div></section>
+</main>
+<section class="locations"><div class="wrap"><h2>Our Branches</h2><div class="loc-grid"><div class="loc"><h3>Head Office</h3><p>Sono/Buwa Complex, Office No. 01/3, Giyani Section A, Giyani</p><p><a href="tel:+27645441292">064 544 1292</a></p></div><div class="loc"><h3>Soweto Office</h3><p>Protea South, Soweto (next to the Garden Mall)</p><p>Opened August 2026</p></div><div class="loc"><h3>Limpopo Branches</h3><p>Giyani · Phalaborwa · Sekgosese<br>Botlokwa · Saselamani</p></div></div></div></section>
+<footer class="site-footer"><div class="wrap fgrid">
+  <div class="fbrand"><img src="../assets/img/logo-420.png" alt="SWA Funeral Services" width="150" height="150">
+    <p class="motto">“Where Beauty Softens Your Grief”</p>
+    <div class="social"><a href="https://www.facebook.com/p/SWA-Funeral-61550855225483/" rel="noopener" target="_blank" aria-label="Facebook">Facebook</a><a href="https://www.instagram.com/_swa_funerals_/" rel="noopener" target="_blank" aria-label="Instagram">Instagram</a></div></div>
+  <div class="fcols"><div class="fcol"><h4>Services</h4><ul><li><a href="../services/funerals.html">Funerals</a></li><li><a href="../services/graveside-setup.html">Graveside Setup</a></li><li><a href="../services/mortuary.html">Mortuary</a></li><li><a href="../services/caskets.html">Caskets</a></li><li><a href="../services/fleet.html">Our Fleet</a></li></ul></div><div class="fcol"><h4>Funeral Plans</h4><ul><li><a href="../planning/funeral-plans.html">Plans &amp; Pricing</a></li><li><a href="../planning/join-online.html">Join Online</a></li><li><a href="../planning/immediate-need.html">Immediate Need</a></li></ul></div><div class="fcol"><h4>About</h4><ul><li><a href="../about/about-us.html">About SWA</a></li><li><a href="../about/branches.html">Our Branches</a></li><li><a href="../about/team.html">Our Team</a></li><li><a href="../about/gallery.html">Gallery</a></li></ul></div><div class="fcol"><h4>Help</h4><ul><li><a href="../resources/faqs.html">FAQs</a></li><li><a href="../contact/contact-us.html">Contact Us</a></li></ul></div><div class="fcol"><h4>Call Us</h4><ul><li><a href="tel:+27645441292">064 544 1292</a></li><li><a href="tel:+27645403561">064 540 3561</a></li><li><a href="tel:+27645535019">064 553 5019</a></li><li><a href="tel:+27645307532">064 530 7532</a></li><li><a href="tel:+27718577087">071 857 7087</a></li><li><a href="mailto:swafuneralservices48@gmail.com">swafuneralservices48@gmail.com</a></li></ul></div></div>
+</div>
+<div class="legal"><div class="wrap"><span>&copy; 2026 SWA Funeral Services. Established 2021. Terms and conditions apply to all funeral plans.</span>
+  <a href="../privacy-policy.html">Privacy Policy</a></div></div></footer>
+<a class="float-call" href="tel:+27645441292" aria-label="Call 064 544 1292">Call 064 544 1292</a>
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>

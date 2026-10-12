@@ -237,3 +237,95 @@ h3{color:#9a6a12}
   .logo img{height:64px}.hdr{min-height:80px}
   .topbar span:first-child{display:none}
 }
+
+/* ---- hero "ready to help" pill ---- */
+.ready{display:inline-flex;align-items:center;gap:14px;margin-top:28px;padding:8px 22px 8px 8px;border-radius:999px;
+  background:rgba(255,255,255,.14);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.25);text-align:left}
+.faces{display:flex}
+.faces img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid #fff;margin-left:-12px}
+.faces img:first-child{margin-left:0}
+.ready-txt{display:flex;flex-direction:column;line-height:1.2;position:relative;padding-left:18px}
+.ready-txt b{font-size:1.05rem}
+.ready-txt small{color:var(--gold-hi);font-size:.85rem}
+.dot{position:absolute;left:0;top:6px;width:10px;height:10px;border-radius:50%;background:#2ecc71;box-shadow:0 0 0 0 rgba(46,204,113,.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(46,204,113,0)}100%{box-shadow:0 0 0 0 rgba(46,204,113,0)}}
+@media (prefers-reduced-motion:reduce){.dot{animation:none}}
+
+/* ---- trust strip ---- */
+.trust{background:var(--soft);padding:48px 0;text-align:center}
+.trust h2{font-size:clamp(1.6rem,3vw,2.2rem)}
+.trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:20px}
+.trust-card{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #e6dcc4;border-radius:8px;padding:16px;text-align:left;font-size:.95rem;color:#111}
+.ico{flex:none;width:46px;height:46px;border-radius:6px;background:#111;display:flex;align-items:center;justify-content:center}
+.ico svg{width:24px;height:24px;fill:none;stroke:var(--gold-hi);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---- reviews ---- */
+.reviews{padding:64px 0;background:#fff;text-align:center}
+.kicker{font-size:.85rem;letter-spacing:.06em;color:#9a6a12;margin:0}
+.reviews .intro{max-width:640px;margin:0 auto 6px;font-size:.95rem}
+.sample-note{font-size:.72rem;color:#999;text-transform:uppercase;letter-spacing:.08em;margin-bottom:28px}
+.rev-top{display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-bottom:16px}
+.rev-bottom{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rev{margin:0;text-align:left;background:var(--grey);border:1px solid #111;border-radius:10px;padding:24px;display:flex;flex-direction:column}
+.rev .stars{color:var(--accent);letter-spacing:4px;font-size:1.1rem}
+.rev h3{color:#111;font-size:1.25rem;margin:.6em 0 .5em}
+.rev blockquote{margin:0 0 16px;flex:1;font-size:.95rem}
+.rev figcaption{font-size:.85rem;font-weight:600;color:#111}
+.rev.big{padding:40px;background:#111;color:#ddd}
+.rev.big .stars{font-size:1.8rem}
+.rev.big h3{color:var(--gold-hi);font-size:1.7rem}
+.rev.big blockquote{font-size:1.05rem}
+.rev.big figcaption{color:#fff}
+.rev.small h3{font-size:1.1rem}.rev.small blockquote{font-size:.88rem}
+
+/* ---- callback ---- */
+.callback{background:#111;color:#ddd;padding:64px 0;border-top:4px solid var(--accent)}
+.callback-in{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:center}
+.callback h2{color:#fff}
+.callback .checks li{color:#eee}
+.callback .form{background:#fff;color:var(--text);padding:28px;border-radius:8px}
+.callback .small a{color:#9a6a12}
+
+/* ---- forms ---- */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.grid3{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:0 12px}
+.form select{display:block;width:100%;padding:10px;border:1px solid #ccc;font:inherit;margin-top:4px;background:#fff}
+.form input:focus,.form select:focus,.form textarea:focus{outline:2px solid var(--accent);border-color:var(--accent)}
+.form.tried :invalid{border-color:#c0392b;background:#fff6f5}
+.req{color:#c0392b}
+.join-wrap{display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:start}
+.join-wrap .mini-steps{grid-column:1/-1}
+.mini-steps{display:flex;gap:8px;list-style:none;padding:0;margin:0 0 8px;counter-reset:m}
+.mini-steps li{flex:1;counter-increment:m;border-top:4px solid #e4dcc8;padding-top:8px;font-size:.85rem;color:#999}
+.mini-steps li:before{content:counter(m) ". "}
+.mini-steps li.on{border-color:var(--accent);color:#111;font-weight:600}
+.join-form fieldset{border:1px solid #e4dcc8;border-radius:8px;padding:20px 24px 8px;margin:0 0 24px;background:#fff}
+.join-form legend{font-family:var(--serif);font-size:1.3rem;color:#111;padding:0 8px}
+.join-form legend small{font-size:.8rem;color:#999;font-family:var(--sans)}
+.plan-pick{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+.pick input{position:absolute;opacity:0}
+.pick span{display:block;border:2px solid #e4dcc8;border-radius:6px;padding:10px 16px;cursor:pointer;font-weight:600;color:#111}
+.pick input:checked+span{border-color:var(--accent);background:var(--cream)}
+.pick input:focus-visible+span{outline:2px solid var(--accent)}
+.dep{position:relative;background:var(--grey);border-radius:6px;padding:12px 44px 0 12px;margin-bottom:10px}
+.dep .rm{position:absolute;right:8px;top:8px;border:0;background:#111;color:#fff;width:28px;height:28px;border-radius:50%;cursor:pointer}
+.btn.outline{background:#fff;border:2px dashed var(--accent);color:#111;margin-bottom:16px}
+.btn.outline:disabled{opacity:.5;cursor:default}
+.tick{display:flex!important;gap:10px;align-items:flex-start;font-weight:400!important;color:var(--text)!important}
+.tick input{width:auto!important;margin-top:5px!important}
+.big-btn{width:100%;font-size:1.1rem;padding:1em;margin:8px 0}
+.join-side{position:sticky;top:120px;background:var(--soft);padding:24px;border-radius:8px}
+.side-pic img{border-radius:6px;margin-top:12px}
+.form-done{background:#fff;border:2px solid var(--accent);border-radius:8px;padding:36px;text-align:center}
+.tickmark{width:60px;height:60px;border-radius:50%;background:#111;color:var(--gold-hi);font-size:2rem;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+
+@media (max-width:1000px){.trust-row{grid-template-columns:repeat(2,1fr)}.join-wrap{grid-template-columns:1fr}.join-side{position:static}}
+@media (max-width:760px){
+  .rev-top,.rev-bottom,.callback-in,.grid2,.grid3{grid-template-columns:1fr}
+  .rev.big{padding:28px}
+  .ready{padding-right:16px}
+  .trust-row{grid-template-columns:1fr 1fr}.trust-card{flex-direction:column;text-align:center;font-size:.85rem}
+}
+.join-form fieldset{min-width:0}
+.join-wrap>*{min-width:0}
+.pick{position:relative}
