@@ -18,11 +18,11 @@
 // ---------------------------------------------------------------------------
 // Forms: enquiries, callbacks and online plan registration.
 // Set FORM_ENDPOINT to a form backend (e.g. Formspree, Web3Forms, a Supabase
-// function or SWA's CRM webhook) to receive submissions as JSON. Until it is
-// set, submissions open the visitor's email app addressed to SWA.
+// function or the client's CRM webhook) to receive submissions as JSON. Until it is
+// set, submissions open the visitor's email app addressed to the business.
 // ---------------------------------------------------------------------------
 var FORM_ENDPOINT = '';
-var FORM_EMAIL = 'swafuneralservices48@gmail.com';
+var FORM_EMAIL = 'info@example.com';
 
 function validSAID(id) {
   if (!/^\d{13}$/.test(id)) return false;
@@ -63,12 +63,12 @@ function showDone(f, ref) {
   box.setAttribute('role', 'status');
   box.innerHTML = '<div class="tickmark">&#10003;</div><h3>Thank you, we have your details</h3>' +
     '<p>Your reference is <b>' + ref + '</b>. A consultant from your nearest branch will contact you shortly.</p>' +
-    '<p class="small">For a death in the family, please call 064 544 1292 at any time.</p>';
+    '<p class="small">For a death in the family, please call 010 000 0000 at any time.</p>';
   f.replaceWith(box);
   box.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
-document.querySelectorAll('.swa-form').forEach(function (f) {
+document.querySelectorAll('.fp-form').forEach(function (f) {
   // Pre-select a plan from ?plan=...
   var plan = new URLSearchParams(location.search).get('plan');
   if (plan) f.querySelectorAll('input[name=plan]').forEach(function (r) { if (r.value === plan) r.checked = true; });
@@ -128,14 +128,14 @@ document.querySelectorAll('.swa-form').forEach(function (f) {
       return;
     }
     var data = formToObject(f);
-    var ref = 'SWA-' + Date.now().toString(36).toUpperCase().slice(-6);
+    var ref = 'FP-' + Date.now().toString(36).toUpperCase().slice(-6);
     data.form = f.dataset.form; data.reference = ref; data.page = location.pathname; data.submitted = new Date().toISOString();
     var btn = f.querySelector('[type=submit]'); btn.disabled = true; btn.textContent = 'Sending…';
 
     if (FORM_ENDPOINT) {
       fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) })
         .then(function (r) { if (!r.ok) throw r; showDone(f, ref); })
-        .catch(function () { btn.disabled = false; btn.textContent = 'Try again'; alert('Sorry, something went wrong. Please call 064 544 1292.'); });
+        .catch(function () { btn.disabled = false; btn.textContent = 'Try again'; alert('Sorry, something went wrong. Please call 010 000 0000.'); });
     } else {
       location.href = 'mailto:' + FORM_EMAIL + '?subject=' + encodeURIComponent(data.form + ' ' + ref) + '&body=' + encodeURIComponent(toText(data));
       showDone(f, ref);

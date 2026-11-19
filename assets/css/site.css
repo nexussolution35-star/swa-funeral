@@ -1,4 +1,4 @@
-/* SWA Funeral Services — brand colours from the logo (black + gold) */
+/* Funeral Parlor — brand colours from the logo (black + gold) */
 :root{
   --primary:#111111; --accent:#b8871f; --gold-hi:#e8c35a; --cream:#fbf5e6; --soft:#f4ede0; --grey:#f4f3f0;
   --text:#4a4a4a; --white:#fff;
@@ -169,7 +169,7 @@ summary{cursor:pointer;font-family:var(--serif);font-weight:700;color:var(--prim
 .hero .ph span,.scenic .ph span,.pets .ph span,.tile .ph span{position:absolute;bottom:12px;right:16px;font-size:.7rem;opacity:.6}
 .btn{white-space:nowrap}
 
-/* ---- SWA additions ---- */
+/* ---- Funeral Parlor additions ---- */
 img{max-width:100%;display:block}
 img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .pic img{width:100%;height:100%;max-height:520px;object-fit:cover;box-shadow:0 10px 30px rgba(0,0,0,.12)}
@@ -354,19 +354,19 @@ h3{color:#9a6a12}
 .incl-list li{align-content:start}
 
 /* ---- chat widget (placeholder) ---- */
-.swa-chat{position:fixed;right:20px;bottom:20px;z-index:80;font-family:var(--sans)}
+.fp-chat{position:fixed;right:20px;bottom:20px;z-index:80;font-family:var(--sans)}
 .chat-launch{display:flex;align-items:center;gap:10px;border:0;cursor:pointer;padding:8px 20px 8px 8px;border-radius:999px;
   background:#111;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.3);font:600 .95rem var(--sans);position:relative;transition:transform .2s}
 .chat-launch:hover{transform:translateY(-2px)}
 .launch-ico{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#9a6a12,var(--accent),var(--gold-hi));display:flex;align-items:center;justify-content:center}
 .launch-ico svg{width:20px;height:20px;fill:#111}
 .badge{position:absolute;top:-4px;left:34px;background:#e74c3c;color:#fff;font-size:.7rem;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid #fff}
-.swa-chat.open .chat-launch .launch-txt{display:none}
-.swa-chat.open .chat-launch{padding:8px}
+.fp-chat.open .chat-launch .launch-txt{display:none}
+.fp-chat.open .chat-launch{padding:8px}
 .chat-panel{position:absolute;right:0;bottom:72px;width:370px;height:560px;max-height:calc(100vh - 110px);background:#fff;border-radius:16px;
   box-shadow:0 20px 60px rgba(0,0,0,.28);display:flex;flex-direction:column;overflow:hidden;
   opacity:0;visibility:hidden;transform:translateY(16px) scale(.97);transform-origin:bottom right;transition:.22s ease}
-.swa-chat.open .chat-panel{opacity:1;visibility:visible;transform:none}
+.fp-chat.open .chat-panel{opacity:1;visibility:visible;transform:none}
 .chat-head{background:#111;color:#fff;padding:16px;display:flex;align-items:center;gap:12px;border-bottom:3px solid var(--accent)}
 .chat-faces{display:flex}
 .chat-faces img{width:34px;height:34px;border-radius:50%;object-fit:cover;border:2px solid #111;margin-left:-10px}
@@ -401,10 +401,20 @@ h3{color:#9a6a12}
 .chat-foot{text-align:center;font-size:.72rem;color:#999;padding:0 0 10px;background:#fff}
 .chat-foot a{color:#9a6a12;font-weight:600}
 @media (max-width:760px){
-  .swa-chat{right:12px;bottom:80px}
+  .fp-chat{right:12px;bottom:80px}
   .chat-launch .launch-txt{display:none}.chat-launch{padding:6px}
-  .swa-chat.open{inset:0;right:0;bottom:0}
-  .swa-chat.open .chat-panel{position:fixed;inset:0;width:auto;height:auto;max-height:none;border-radius:0}
-  .swa-chat.open .chat-launch{display:none}
+  .fp-chat.open{inset:0;right:0;bottom:0}
+  .fp-chat.open .chat-panel{position:fixed;inset:0;width:auto;height:auto;max-height:none;border-radius:0}
+  .fp-chat.open .chat-launch{display:none}
 }
 @media (prefers-reduced-motion:reduce){.chat-panel,.dots i{transition:none;animation:none}}
+
+/* ---- text wordmark (replaces image logo) ---- */
+.wm{display:inline-flex;flex-direction:column;align-items:flex-start;line-height:1;text-decoration:none}
+.wm-a{font:600 .7rem/1 var(--sans);letter-spacing:.42em;text-transform:uppercase;color:#9a6a12;padding-bottom:6px;border-bottom:2px solid var(--accent);margin-bottom:5px}
+.wm-b{font:400 2rem/1 var(--serif);color:#111;letter-spacing:.01em}
+.logo{text-decoration:none}
+.site-footer .wm{margin-bottom:14px}
+.site-footer .wm-a{color:var(--gold-hi)}
+.site-footer .wm-b{color:#fff;font-size:2.3rem}
+@media (max-width:760px){.wm-b{font-size:1.6rem}.wm-a{font-size:.6rem}}

@@ -1,10 +1,10 @@
-// SWA chat widget (front-end placeholder).
+// Chat widget (front-end placeholder).
 // Replies are scripted locally. To go live, connect send() to a chat or
 // WhatsApp provider and remove the scripted replies.
 (function () {
   var me = document.currentScript;
   var ROOT = me ? me.src.replace(/assets\/js\/chat\.js.*$/, '') : '/';
-  var PHONE = '064 544 1292', TEL = '+27645441292';
+  var PHONE = '010 000 0000', TEL = '+27100000000';
 
   var QUICK = [
     { label: 'Join a funeral plan', reply: 'Great choice. You can register online in a few minutes, and a consultant will confirm your cover.', link: ['Join a plan online', 'planning/join-online.html'] },
@@ -16,17 +16,17 @@
   var faces = [1, 2, 3].map(function (i) { return '<img src="' + ROOT + 'assets/img/face-' + i + '.jpg" alt="">'; }).join('');
 
   var wrap = document.createElement('div');
-  wrap.className = 'swa-chat';
+  wrap.className = 'fp-chat';
   wrap.innerHTML =
-    '<div class="chat-panel" role="dialog" aria-label="Chat with SWA Funeral Services" aria-hidden="true">' +
+    '<div class="chat-panel" role="dialog" aria-label="Chat with Funeral Parlor" aria-hidden="true">' +
       '<div class="chat-head">' +
         '<span class="chat-faces">' + faces + '</span>' +
-        '<div class="chat-title"><b>SWA Support</b><small><span class="online"></span>Online · typically replies in minutes</small></div>' +
+        '<div class="chat-title"><b>Support Team</b><small><span class="online"></span>Online · typically replies in minutes</small></div>' +
         '<button class="chat-x" aria-label="Close chat">&times;</button>' +
       '</div>' +
       '<div class="chat-body" aria-live="polite">' +
         '<div class="chat-day">Today</div>' +
-        '<div class="msg bot"><img class="av" src="' + ROOT + 'assets/img/face-2.jpg" alt=""><div class="bubble">Hello 👋 Welcome to SWA Funeral Services. How can we help you today?</div></div>' +
+        '<div class="msg bot"><img class="av" src="' + ROOT + 'assets/img/face-2.jpg" alt=""><div class="bubble">Hello 👋 Welcome to Funeral Parlor. How can we help you today?</div></div>' +
         '<div class="chips">' + QUICK.map(function (q, i) { return '<button class="chip" data-q="' + i + '">' + q.label + '</button>'; }).join('') + '</div>' +
       '</div>' +
       '<form class="chat-input"><input type="text" placeholder="Type your message…" aria-label="Message" autocomplete="off">' +
